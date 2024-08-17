@@ -1,0 +1,61 @@
+<Project xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:lingmo="http://api.lingmo.org/doap-extensions#"
+         xmlns="http://usefulinc.com/ns/doap#">
+
+  <name xml:lang="en">LINGMO VirtualPC</name>
+  <shortdesc xml:lang="en">Virtualization made simple</shortdesc>
+  <description xml:lang="en">A simple LINGMO application to manage virtual systems</description>
+  <category rdf:resource="http://api.lingmo.org/doap-extensions#apps" />
+  <programming-language>Vala</programming-language>
+
+  <homepage
+  rdf:resource="https://lingmo.org" />
+  <support-forum
+  rdf:resource="https://discourse.lingmo.org/tag/virtualpc" />
+  <download-page
+  rdf:resource="https://download.lingmo.org/sources/lingmo-virtualpc/"/>
+  <bug-database
+  rdf:resource="https://gitlab.gnome.org/GNOME/gnome-virtualpc/issues"/>
+
+  <maintainer>
+    <foaf:Person>
+      <foaf:name>Felipe Borges</foaf:name>
+      <foaf:mbxo rdf:resource="mailto:felipeborges@lingmo.org" />
+      <lingmo:userid>felipeborges</lingmo:userid>
+    </foaf:Person>
+  </maintainer>
+
+  <author>
+    <foaf:Person>
+      <foaf:name>Alexander Larsson</foaf:name>
+      <foaf:mbox rdf:resource="mailto:alexl@redhat.com" />
+      <lingmo:userid>alexl</lingmo:userid>
+    </foaf:Person>
+  </author>
+
+  <author>
+    <foaf:Person>
+      <foaf:name>Christophe Fergeau</foaf:name>
+      <foaf:mbox rdf:resource="mailto:cfergeau@redhat.com" />
+      <lingmo:userid>teuf</lingmo:userid>
+    </foaf:Person>
+  </author>
+
+  <author>
+    <foaf:Person>
+      <foaf:name>Marc-André Lureau</foaf:name>
+      <foaf:mbox rdf:resource="mailto:malureau@lingmo.org" />
+      <lingmo:userid>malureau</lingmo:userid>
+    </foaf:Person>
+  </author>
+
+  <author>
+    <foaf:Person>
+      <foaf:name>Zeeshan Ali (Khattak)</foaf:name>
+      <foaf:mbox rdf:resource="mailto:zeeshanak@lingmo.org" />
+      <lingmo:userid>zeeshanak</lingmo:userid>
+    </foaf:Person>
+  </author>
+</Project>

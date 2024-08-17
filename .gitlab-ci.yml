@@ -1,0 +1,53 @@
+include: 'https://gitlab.gnome.org/GNOME/citemplates/raw/master/flatpak/flatpak_ci_initiative.yml'
+
+stages:
+- test
+- fedora
+- deploy
+
+flatpak:
+    variables:
+        MANIFEST_PATH: "build-aux/flatpak/org.lingmo.VirtualPCDevel.json"
+        FLATPAK_MODULE: "lingmo-virtualpc"
+        RUNTIME_REPO: "https://nightly.lingmo.org/lingmo-nightly.flatpakrepo"
+        APP_ID: "org.lingmo.VirtualPCDevel"
+        BUNDLE: "lingmo-virtualpc.flatpak"
+    extends: .flatpak
+
+nightly:
+    extends: '.publish_nightly'
+    dependencies: ['flatpak']
+    needs: ['flatpak']
+
+fedora:latest:
+    image: fedora:40
+    stage: fedora
+    when: manual
+    needs: []
+    before_script:
+    - dnf update -y --nogpgcheck
+    - dnf install -y meson git vala gtk3-devel
+                     libosinfo-devel libsecret-devel
+                     libvirt-gconfig-devel libvirt-gobject-devel
+                     spice-gtk3-vala libarchive-devel gettext
+                     libgudev-devel webkit2gtk4.1-devel libusbx-devel
+                     tracker3-devel libosinfo-vala
+                     python3-devel libxml2-devel
+                     libhandy1-devel desktop-file-utils
+                     itstool libsoup3-devel libportal-gtk3-devel
+                     --nogpgcheck
+
+    script:
+        - meson _build .
+        - ninja -C _build
+
+pages:
+    when: manual
+    image: fedora:37
+    script:
+    - mkdir ./public
+    - dnf install -y yelp-tools
+    - yelp-build html -i --output public/ help/C/*page
+    artifacts:
+        paths:
+        - public

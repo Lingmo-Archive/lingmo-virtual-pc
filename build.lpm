@@ -1,0 +1,77 @@
+# Maintainer: Lingmo OS Team <team@lingmo.org>
+
+pkgname=lingmo-virtual-pc
+pkgver=0.5
+pkgrel=1
+pkgdesc='Virtual PC'
+arch=('x86_64')
+url='https://github.com/LingmoOS/lingmo-virtual-pc'
+license=('LGPL-2.0-or-later')
+depends=(
+  'cairo'
+  'cdrtools'
+  'dconf'
+  'edk2-ovmf'
+  'gcc-libs'
+  'gdk-pixbuf2'
+  'glib2'
+  'glibc'
+  'gtk3'
+  'hicolor-icon-theme'
+  'libarchive'
+  'libgudev'
+  'libhandy'
+  'libosinfo'
+  'libportal'
+  'libportal-gtk3'
+  'libsecret'
+  'libsoup3'
+  'libusb'
+  'libvirt-glib'
+  'libxml2'
+  'mtools'
+  'qemu-desktop'
+  'spice-gtk'
+  'tracker3'
+  'webkit2gtk-4.1'
+  'xdg-user-dirs'
+)
+makedepends=(
+  'appstream-glib'
+  'git'
+  'gobject-introspection'
+  'meson'
+  'spice-protocol'
+  'vala'
+  'yelp-tools'
+)
+groups=('lingmo')
+source=(
+  git+$url
+  "git+https://gitlab.gnome.org/felipeborges/libovf-glib.git"
+)
+b2sums=('SKIP'
+        'SKIP')
+validpgpkeys=('41EF7182553A87AC18196A77F27F2FDA54F067D8') # Lingmo OS Team
+
+prepare() {
+  cd $pkgname
+
+  git submodule init
+  git submodule set-url subprojects/libovf-glib "$srcdir/libovf-glib"
+  git -c protocol.file.allow=always -c protocol.allow=never submodule update
+}
+
+build() {
+  arch-meson $pkgname build
+  meson compile -C build
+}
+
+check() {
+  meson test -C build --print-errorlogs
+}
+
+package() {
+  meson install -C build --destdir "$pkgdir"
+}
+

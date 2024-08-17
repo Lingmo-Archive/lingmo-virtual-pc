@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2019 Red Hat, Inc -->
+<component type="desktop">
+  <id>@appid@.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LGPL-2.1+</project_license>
+  <name>VirtualPC</name>
+  <summary>Virtualization made simple</summary>
+  <description>
+    <p>
+      Select an operating system and let VirtualPC download and install it for you
+      in a virtual machine.
+    </p>
+
+    <p>Features:</p>
+    <ul>
+      <li>Download freely available operating systems</li>
+      <li>Automatically install CentOS Stream, Debian, Fedora, Microsoft Windows, OpenSUSE, Red
+      Hat Enterprise Linux, Lingmo OS and Ubuntu</li>
+      <li>Create virtual machines from operating system images with a couple of clicks</li>
+      <li>Limit the resources (memory and storage) your virtual machines consume from your system</li>
+      <li>Take snapshots of virtual machines to restore to previous states</li>
+      <li>Redirect USB devices from your physical machine into virtual machines</li>
+      <li>3D acceleration for some of the supported operating systems</li>
+      <li>Automatically resize virtual machines displays to the window size</li>
+      <li>Share clipboard between your system and virtual machines</li>
+      <li>Share files to virtual machines by dropping them from your file manager into the VirtualPC window</li>
+      <li>Setup Shared Folders between your system and virtual machines</li>
+    </ul>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://gitlab.gnome.org/GNOME/gnome-virtualpc-logos/-/raw/master/screenshots/lingmo-42/01-icon-view.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://gitlab.gnome.org/GNOME/gnome-virtualpc-logos/-/raw/master/screenshots/lingmo-42/02-display-view.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://gitlab.gnome.org/GNOME/gnome-virtualpc-logos/-/raw/master/screenshots/lingmo-42/03-preferences-dialog.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://gitlab.gnome.org/GNOME/gnome-virtualpc-logos/-/raw/master/screenshots/lingmo-42/04-vm-creation-assistant.png</image>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="46.1" date="2024-04-22" type="stable">
+      <description>
+        <p>This is the second stable release in the LINGMO 46 series, with the
+        following improvements.</p>
+        <ul>
+          <li>Fix build with Clang</li>
+          <li>Added/updated/fixed translations</li>
+        </ul>
+      </description>
+    </release>
+    <release version="46.0" date="2024-03-18" type="stable">
+      <description>
+        <p>This is the first stable release in the LINGMO 46 series, with the
+        following improvements.</p>
+        <ul>
+          <li>Disable "secure-boot" for EFI virtual machines</li>
+          <li>Use libportal to call Background Portal</li>
+          <li>Fallback to default resources on error cases</li>
+          <li>Fix crash when processing a non bootable ISO image</li>
+          <li>Fix permissions when copying template files</li>
+          <li>Added/updated/fixed translations</li>
+        </ul>
+      </description>
+    </release>
+    <release version="45.0" date="2023-09-18"/>
+    <release version="43.1" date="2022-10-25"/>
+  </releases>
+  <kudos>
+    <kudo>AppMenu</kudo>
+    <kudo>HiDpiIcon</kudo>
+    <kudo>HighContrast</kudo>
+    <kudo>ModernToolkit</kudo>
+    <kudo>SearchProvider</kudo>
+    <kudo>UserDocs</kudo>
+  </kudos>
+  <provides>
+    <binary>lingmo-virtualpc</binary>
+  </provides>
+  <launchable type="desktop-id">@appid@.desktop</launchable>
+  <project_group>Lingmo</project_group>
+  <!-- developer_name tag deprecated with Appstream 1.0 -->
+  <developer_name>The Lingmo Project</developer_name>
+  <developer id="org.lingmo">
+    <name>The Lingmo Project</name>
+  </developer>
+  <update_contact>felipeborges_at_lingmo.org</update_contact>
+  <url type="homepage">https://lingmo.org</url>
+  <url type="bugtracker">https://github.com/LingmoOS/LingmoOS/issues</url>
+  <url type="donation">https://www.lingmo.org/</url>
+  <url type="help">https://github.com/LingmoOS/LingmoOS/issues</url>
+  <url type="translate">https://github.com/LingmoOS/LingmoOS/issues</url>
+  <url type="vcs-browser">https://github.com/LingmoOS/LingmoOS/issues</url>
+  <translation type="gettext">lingmo-virtualpc</translation>
+  <launchable type="desktop-id">@appid@.desktop</launchable>
+  <content_rating type="oars-1.1" />
+  <custom>
+    <value key="GnomeSoftware::key-colors">[(143, 124, 209)]</value>
+  </custom>
+
+</component>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  These are operating systems listed in the recommended section of the
+  "Download an OS" page.
+
+  This list is powered by libosinfo, therefore the IDs are unique identifiers
+  for each OS in osinfo-db. Use "osinfo-query os" in the CLI to list all available
+  operating systems and their respective IDs.
+
+  Downstreams are encouraged to tweak the list as they wish. Sorting is also
+  available.
+
+  "title", "subtitle" and "url" can be overwritten by distributors.
+
+  Distributors can host their own recommended-downloads.xml file, and point to it
+  with the org.lingmo.virtualpc recommended-downloads-url gsetting.
+
+  See https://gitlab.gnome.org/GNOME/gnome-virtualpc/-/wikis/recommended-downloads.xml
+ -->
+<list>
+  <os id="http://redhat.com/rhel/"/>
+  <os id="http://rockylinux.org/rocky/"/>
+  <os id="http://fedoraproject.org/fedora/"/>
+  <os id="http://fedoraproject.org/silverblue/"/>
+  <os id="http://ubuntu.com/ubuntu/"/>
+  <os id="http://opensuse.org/opensuse/15.4"/>
+  <os id="http://opensuse.org/opensuse/tumbleweed"/>
+  <os id="http://debian.org/debian/"/>
+  <os id="http://endlessos.com/eos/"/>
+  <os id="http://lingmo.org/">
+    <title>Lingmo OS System</title>
+    <subtitle>The Lingmo OS Project</subtitle>
+    <url>https://github.com/LingmoOS/archlingmo-releases/releases/download/2024.08.17.13.17/lingmoos-2024.08.17-x86_64.iso</url>
+  </os>
+</list>
