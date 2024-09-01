@@ -1,0 +1,5 @@
+# false positives triggered by opting into dh compat 14 early
+cute-field X-DH-Compat vs X-Dh-Compat [debian/control:6]
+debhelper-but-no-misc-depends lingmo-virtual-pc
+debhelper-compat-file-is-missing
+package-uses-deprecated-debhelper-compat-version 1

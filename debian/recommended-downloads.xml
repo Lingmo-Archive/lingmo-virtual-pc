@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  These are operating systems listed in the recommended section of the
+  "Download an OS" page.
+
+  This list is powered by libosinfo, therefore the IDs are unique identifiers
+  for each OS in osinfo-db. Use "osinfo-query os" in the CLI to list all available
+  operating systems and their respective IDs.
+
+  Downstreams are encouraged to tweak the list as they wish. Sorting is also
+  available.
+
+  "title", "subtitle" and "url" can be overwritten by distributors.
+
+  Distributors can host their own recommended-downloads.xml file, and point to it
+  with the org.lingmo.boxes recommended-downloads-url gsetting.
+
+  See https://gitlab.lingmo.org/Lingmo OS/lingmo-virtual-pc/-/wikis/recommended-downloads.xml
+ -->
+<list>
+  <os id="http://debian.org/debian/testing"/>
+  <os id="http://debian.org/debian/12"/>
+</list>

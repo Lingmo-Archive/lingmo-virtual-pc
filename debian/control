@@ -1,0 +1,57 @@
+Source: lingmo-virtual-pc
+Section: lingmo
+Priority: optional
+Maintainer: Lingmo OS Team <team@lingmo.org>
+X-DH-Compat: 14
+Build-Depends: appstream-util <!nocheck>,
+               debhelper (>= 13.17),
+               desktop-file-utils <!nocheck>,
+               dh-sequence-user-session-migration,
+               freerdp2-dev,
+               gobject-introspection (>= 0.9.6),
+               itstool,
+               libarchive-dev (>= 3.0.0),
+               libgirepository1.0-dev,
+               libglib2.0-dev (>= 2.52.0),
+               libgtk-3-dev (>= 3.22.20),
+               libgtk-vnc-2.0-dev (>= 0.4.4),
+               libgudev-1.0-dev (>= 165),
+               libhandy-1-dev (>= 1.5.90),
+               libosinfo-1.0-dev (>= 1.10.0-2~),
+               libportal-gtk3-dev (>= 0.7),
+               libsecret-1-dev,
+               libspice-client-gtk-3.0-dev (>= 0.41-2~),
+               libtracker-sparql-3.0-dev,
+               libusb-1.0-0-dev (>= 1.0.9),
+               libvirt-dev,
+               libvirt-glib-1.0-dev (>= 5.0.0),
+               libvte-2.91-dev (>= 0.40.2),
+               libwebkit2gtk-4.1-dev,
+               libxml2-dev (>= 2.7.8),
+               libxml2-utils,
+               meson (>= 0.59.0),
+               valac (>= 0.36.0)
+Rules-Requires-Root: no
+Standards-Version: 4.7.0
+Vcs-Browser: https://github.com/LingmoOS/lingmo-virtual-pc
+Vcs-Git: https://github.com/LingmoOS/lingmo-virtual-pc.git
+Homepage: https://lingmo.org
+
+Package: lingmo-virtual-pc
+Architecture: any
+Depends: genisoimage,
+         libosinfo-bin,
+         libvirt-clients,
+         libvirt-daemon,
+         tracker (>= 3.0),
+         user-session-migration,
+Recommends: qemu-system-x86
+Suggests: lingmo-connections
+Description: Simple Lingmo OS app to access virtual systems
+ Lingmo OS Boxes is a desktop client to view or use local virtual machines.
+ Boxes is intentionally simple and easy to use.
+ .
+ Hardware virtualization is required.
+ .
+ Previously, Lingmo OS Boxes could also be used to connect to remote computers,
+ but that feature is now provided by the Lingmo OS Connections app.
